@@ -1,6 +1,4 @@
-#! /bin/bash
-
-# save my current directory
+#Save my current directory
 MY_CWD=$(pwd)
 
 # creating staging directories
@@ -27,36 +25,40 @@ OLD_FILE="Hospital General Information.csv"
 NEW_FILE="hospitals.csv"
 tail -n +2 "$OLD_FILE" > $NEW_FILE
 # copy the files to hfds
-hdfs dfs -put $NEW_FILE /user/w205/hospital_compare
+hdfs dfs -mkdir /user/w205/hospital_compare/hospitals
+hdfs dfs -put $NEW_FILE /user/w205/hospital_compare/hospitals
 
 OLD_FILE="Timely and Effective Care - Hospital.csv"
 NEW_FILE="effective_care.csv"
 tail -n +2 "$OLD_FILE"> $NEW_FILE
 # copy the files to hfds
-hdfs dfs -put $NEW_FILE /user/w205/hospital_compare
+hdfs dfs -mkdir /user/w205/hospital_compare/effective_care
+hdfs dfs -put $NEW_FILE /user/w205/hospital_compare/effective_care
 
 OLD_FILE="Readmissions and Deaths - VA.csv"
 NEW_FILE="readmissions.csv"
 tail -n +2 "$OLD_FILE" > $NEW_FILE
 # copy the files to hfds
-hdfs dfs -put $NEW_FILE /user/w205/hospital_compare
+hdfs dfs -mkdir /user/w205/hospital_compare/readmissions
+hdfs dfs -put $NEW_FILE /user/w205/hospital_compare/readmissions
 
 OLD_FILE="Measure Dates.csv"
 NEW_FILE="Measures.csv"
 tail -n +2 "$OLD_FILE" > $NEW_FILE
 # copy the files to hfds
-hdfs dfs -put $NEW_FILE /user/w205/hospital_compare
+hdfs dfs -mkdir /user/w205/hospital_compare/measures
+hdfs dfs -put $NEW_FILE /user/w205/hospital_compare/measures
 
 OLD_FILE="hvbp_hcahps_11_10_2016.csv"
 NEW_FILE="survey_responses.csv"
 tail -n +2 "$OLD_FILE" > $NEW_FILE
 # copy the files to hfds
-hdfs dfs -put $NEW_FILE /user/w205/hospital_compare
+hdfs dfs -mkdir /user/w205/hospital_compare/survey_responses
+hdfs dfs -put $NEW_FILE /user/w205/hospital_compare/survey_responses
 
 # change directory back to the original
 
 cd $MY_CWD
 
 # clean exit
-
 exit

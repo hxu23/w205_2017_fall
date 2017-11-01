@@ -1,4 +1,4 @@
-ave my current working directory
+# save my current working directory
 MY_CWD=$(pwd)
 
 # empty and remove staging directories

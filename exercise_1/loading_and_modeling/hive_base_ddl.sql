@@ -56,7 +56,6 @@ CREATE EXTERNAL TABLE effective_care
  condition string,
  measure_id string,
  measure_name string,
- meets_criteria string,
  score string,
  sample string,
  footnote string,

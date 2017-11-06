@@ -1,8 +1,11 @@
 DROP TABLE IF EXISTS effective_care_scores;
  
 CREATE TABLE effective_care_scores as 
-SELECT measure_id,
+SELECT 
+       provider_id,
+       measure_id,
        measure_name,
+       condition,
        hospital_name, 
        state,
        measure_start_date, 

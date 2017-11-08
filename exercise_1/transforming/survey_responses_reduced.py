@@ -1,4 +1,4 @@
-import os, sys
+import sys
 sys.path.append('/data/spark15/python/')
 import pandas as pd
 import numpy as np

@@ -1,0 +1,118 @@
+Using the two tables: effective_care_scores and hospitals_reduced, we examined the variables 'hospital_overall_score' to come up with the top ten hospitals in the country.
+
+Here are the results
+
+   hospital_overall_rating
+provider_id hospital_name                                                 
+230264      SOUTHEAST MICHIGAN SURGICAL HOSPITAL                         5
+370206      OKLAHOMA SPINE HOSPITAL                                      5
+370215      OKLAHOMA HEART HOSPITAL, LLC                                 5
+370216      TULSA SPINE & SPECIALTY HOSPITAL, LLC                        5
+500008      UNIVERSITY OF WASHINGTON MEDICAL CTR                         5
+370222      MCBRIDE ORTHOPEDIC HOSPITAL                                  5
+140202      ADVOCATE CONDELL MEDICAL CENTER                              5
+370225      SUMMIT MEDICAL CENTER                                        5
+450184      MEMORIAL HERMANN HOSPITAL SYSTEM                             5
+050238      METHODIST HOSPITAL OF SOUTHERN CA                            5
+                                                 
+
+
+Next we used the hospitals_reduced table joined onto the effective_care_scores table to find scores for the various procedures performed at each hosptial and their average score along standard deviation of scores. Here are the results
+
+                                                   score              \
+measure_id                                         ED_1b ED_2b IMM_2   
+provider_id hospital_name                                              
+331311      LITTLE FALLS HOSPITAL                    NaN   NaN   NaN   
+451386      MEMORIAL HOSPITAL                        NaN   NaN   NaN   
+301304      NEW LONDON HOSPITAL                      NaN   NaN   NaN   
+281336      YORK GENERAL HOSPITAL                    NaN   NaN   NaN   
+181304      TRIGG COUNTY HOSPITAL                    NaN   NaN   NaN   
+021313      SOUTH PENINSULA HOSPITAL                 NaN   NaN   NaN   
+051306      GLENN MEDICAL CENTER                     NaN   NaN   9.0   
+111308      CLINCH MEMORIAL HOSPITAL                 NaN   NaN   NaN   
+391316      SOLDIERS AND SAILORS MEMORIAL HOSPITAL   NaN   NaN   NaN   
+161330      AUDUBON COUNTY MEMORIAL HOSPITAL         NaN   NaN   NaN   
+
+                                                                           \
+measure_id                                         IMM_3_OP_27_FAC_ADHPCT   
+provider_id hospital_name                                                   
+331311      LITTLE FALLS HOSPITAL                                     NaN   
+451386      MEMORIAL HOSPITAL                                         NaN   
+301304      NEW LONDON HOSPITAL                                       NaN   
+281336      YORK GENERAL HOSPITAL                                     NaN   
+181304      TRIGG COUNTY HOSPITAL                                     NaN   
+021313      SOUTH PENINSULA HOSPITAL                                  NaN   
+051306      GLENN MEDICAL CENTER                                      NaN   
+111308      CLINCH MEMORIAL HOSPITAL                                  NaN   
+391316      SOLDIERS AND SAILORS MEMORIAL HOSPITAL                    NaN   
+161330      AUDUBON COUNTY MEMORIAL HOSPITAL                          NaN   
+
+                                                                           \
+measure_id                                         OP_1 OP_18b OP_2 OP_20   
+provider_id hospital_name                                                   
+331311      LITTLE FALLS HOSPITAL                   NaN    NaN  NaN   NaN   
+451386      MEMORIAL HOSPITAL                       NaN    NaN  NaN   NaN   
+301304      NEW LONDON HOSPITAL                     NaN    NaN  NaN   NaN   
+281336      YORK GENERAL HOSPITAL                   NaN    NaN  NaN   NaN   
+181304      TRIGG COUNTY HOSPITAL                   NaN    NaN  NaN   NaN   
+021313      SOUTH PENINSULA HOSPITAL                NaN    NaN  NaN   NaN   
+051306      GLENN MEDICAL CENTER                    NaN    NaN  NaN   NaN   
+111308      CLINCH MEMORIAL HOSPITAL                NaN    NaN  NaN   NaN   
+391316      SOLDIERS AND SAILORS MEMORIAL HOSPITAL  NaN    NaN  NaN   NaN   
+161330      AUDUBON COUNTY MEMORIAL HOSPITAL        NaN    NaN  NaN   9.0   
+
+                                                                   ...      \
+measure_id                                         OP_21 OP_22     ...       
+provider_id hospital_name                                          ...       
+331311      LITTLE FALLS HOSPITAL                    NaN   NaN     ...       
+451386      MEMORIAL HOSPITAL                        NaN   NaN     ...       
+301304      NEW LONDON HOSPITAL                      NaN   NaN     ...       
+281336      YORK GENERAL HOSPITAL                    NaN   NaN     ...       
+181304      TRIGG COUNTY HOSPITAL                    NaN   NaN     ...       
+021313      SOUTH PENINSULA HOSPITAL                 NaN   NaN     ...       
+051306      GLENN MEDICAL CENTER                     NaN   NaN     ...       
+111308      CLINCH MEMORIAL HOSPITAL                 NaN   NaN     ...       
+391316      SOLDIERS AND SAILORS MEMORIAL HOSPITAL   NaN   NaN     ...       
+161330      AUDUBON COUNTY MEMORIAL HOSPITAL         NaN   NaN     ...       
+
+                                                                          \
+measure_id                                         OP_31 OP_3b OP_4 OP_5   
+provider_id hospital_name                                                  
+331311      LITTLE FALLS HOSPITAL                    NaN   NaN  NaN  9.0   
+451386      MEMORIAL HOSPITAL                        NaN   NaN  NaN  9.0   
+301304      NEW LONDON HOSPITAL                      NaN   NaN  NaN  9.0   
+281336      YORK GENERAL HOSPITAL                    NaN   NaN  NaN  9.0   
+181304      TRIGG COUNTY HOSPITAL                    NaN   NaN  NaN  NaN   
+021313      SOUTH PENINSULA HOSPITAL                 NaN   NaN  NaN  9.0   
+051306      GLENN MEDICAL CENTER                     NaN   NaN  NaN  NaN   
+111308      CLINCH MEMORIAL HOSPITAL                 NaN   NaN  NaN  9.0   
+391316      SOLDIERS AND SAILORS MEMORIAL HOSPITAL   NaN   NaN  NaN  9.0   
+161330      AUDUBON COUNTY MEMORIAL HOSPITAL         NaN   NaN  NaN  NaN   
+
+                                                                            \
+measure_id                                         PC_01 STK_4 VTE_5 VTE_6   
+provider_id hospital_name                                                    
+331311      LITTLE FALLS HOSPITAL                    NaN   NaN   NaN   NaN   
+451386      MEMORIAL HOSPITAL                        9.0   NaN   NaN   NaN   
+301304      NEW LONDON HOSPITAL                      NaN   NaN   NaN   NaN   
+281336      YORK GENERAL HOSPITAL                    NaN   NaN   NaN   NaN   
+181304      TRIGG COUNTY HOSPITAL                    NaN   NaN   NaN   NaN   
+021313      SOUTH PENINSULA HOSPITAL                 NaN   NaN   NaN   NaN   
+051306      GLENN MEDICAL CENTER                     NaN   NaN   NaN   NaN   
+111308      CLINCH MEMORIAL HOSPITAL                 NaN   NaN   NaN   NaN   
+391316      SOLDIERS AND SAILORS MEMORIAL HOSPITAL   NaN   NaN   NaN   NaN   
+161330      AUDUBON COUNTY MEMORIAL HOSPITAL         NaN   NaN   NaN   NaN   
+
+                                                   Average_Score StDev_Score  
+measure_id                                                                    
+provider_id hospital_name                                                     
+331311      LITTLE FALLS HOSPITAL                            9.0         0.0  
+451386      MEMORIAL HOSPITAL                                9.0         0.0  
+301304      NEW LONDON HOSPITAL                              9.0         0.0  
+281336      YORK GENERAL HOSPITAL                            9.0         0.0  
+181304      TRIGG COUNTY HOSPITAL                            9.0         0.0  
+021313      SOUTH PENINSULA HOSPITAL                         9.0         0.0  
+051306      GLENN MEDICAL CENTER                             9.0         0.0  
+111308      CLINCH MEMORIAL HOSPITAL                         9.0         0.0  
+391316      SOLDIERS AND SAILORS MEMORIAL HOSPITAL           9.0         0.0  
+161330      AUDUBON COUNTY MEMORIAL HOSPITAL                 9.0         0.0   

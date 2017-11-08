@@ -6,8 +6,6 @@ SELECT
        measure_id,
        measure_name,
        condition,
-       hospital_name, 
-       state,
        measure_start_date, 
        measure_end_date, 
        cast(score as decimal(1,0)) score FROM effective_care

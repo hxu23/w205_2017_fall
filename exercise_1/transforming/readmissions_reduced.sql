@@ -3,6 +3,7 @@ DROP TABLE IF EXISTS readmissions_reduced;
 CREATE TABLE readmissions_reduced as 
 SELECT
 	provider_id,
+	hospital_name,
 	measure_name,
 	measure_id,
 	vha_national_rate,

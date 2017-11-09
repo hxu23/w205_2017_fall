@@ -20,7 +20,7 @@ effective_care = hc.sql('select * from effective_care_scores').toPandas()
 
 def best_hospital_overall():
     df = pd.merge(hospitals, effective_care, how='inner', left_on='provider_id', right_on='provider_id') # merge effective_care_scores and hospitals_reduced
-    df['hospital_overall_rating'] = df['hospital_overall_rating'].replace('Not Available').apply(pd.to_numeric) # replace string values with numeric and
+    df['hospital_overall_rating'] = df['hospital_overall_rating'].replace('Not Available', np.nan).apply(pd.to_numeric) # replace string values with numeric and
 
     print (df.groupby(['provider_id', 'hospital_name']).mean()[['hospital_overall_rating']]
                                                        .sort_values(by='hospital_overall_rating',

@@ -1,6 +1,7 @@
 import sys
 sys.path.append('/data/spark15/python/')
 
+import numpy as np
 import pandas as pd
 
 from pyspark import SparkContext

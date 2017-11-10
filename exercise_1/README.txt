@@ -10,3 +10,6 @@ transforming folder contains a notebook use for exploratory data analysis. The n
 
 Week 7
 investigations folder contains all results. There are individual notebooks that show the work done to arrive at the results and then the .py files contain the scripts to execute and display output.
+
+Thanks,
+Harry

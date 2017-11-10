@@ -1,0 +1,32 @@
+By using the effective_care_scores and hospitals_reduced, we are able to find the below results for states with best hospitals. 
+
+We used the overall hospital ranking measure rank the states with the best hospitals. We also used the procedure scores by hospital, 
+and grouped by state to obtain the states with the best hospitals by procedure measurements.
+
+Top 10 States by Overall Hospital Rating
+
+state                         
+SD                    3.857143
+DE                    3.666667
+WI                    3.611111
+MN                    3.531646
+ID                    3.526316
+IN                    3.481481
+NH                    3.480000
+CO                    3.450980
+UT                    3.448276
+ME                    3.437500
+
+Top 10 States by Procedure Measures Average Score
+
+VI    6.000000
+WV    3.371795
+AK    3.333333
+WY    3.217544
+NC    3.068841
+KY    2.990506
+ME    2.974138
+OK    2.944624
+VT    2.904762
+WI    2.891141
+

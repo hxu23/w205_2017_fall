@@ -1,0 +1,17 @@
+By using the tables hospital_reduced and effective_care_scores, we arrive at the measure_ids for 
+procedures with the higest variability across all hospitals.
+
+
+Top 10 procedures with Highest Variability Across Hospitals - Measure IDs
+            
+score  VTE_5                     4.949747
+       OP_23                     3.817254
+       IMM_3_OP_27_FAC_ADHPCT    3.492850
+       OP_29                     3.289455
+       IMM_2                     3.010084
+       OP_30                     2.991534
+       ED_2b                     2.833043
+       VTE_6                     2.383159
+       OP_5                      2.266249
+       STK_4                     2.242448
+

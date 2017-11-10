@@ -49,7 +49,7 @@ def patient_survey_correl():
     print np.round(results['overall_rating_of_hospital_performance_rate'].corr(results['hospital_overall_rating']), 2)
 
     print '\n'
-    print 'correlation between patient survey hospital overall rating and hospital procedure variability is '
+    print 'Correlation between patient survey hospital overall rating and hospital procedure variability is '
     print np.round(results['overall_rating_of_hospital_performance_rate'].corr(results['StDev Procedures']), 2)
 
     return

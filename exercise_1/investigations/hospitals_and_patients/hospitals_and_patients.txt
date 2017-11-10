@@ -1,0 +1,12 @@
+By using the survey_responses_reduced, hospitals_reduced, and effective_care_scores tables, we were able to find the below correlations
+between patient survey results for hospital overall ratings vs. each hospital's procedure variability and overall rating.
+
+We see that there is a positive correlation between the hospital's overall rating and patient survey results, and no correlation
+between procedure variability and patient survey results.
+
+Correlation between patient survey hospital overall rating and hospital overall rating is 
+0.58
+
+
+Correlation between patient survey hospital overall rating and hospital procedure variability is 
+0.01

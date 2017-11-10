@@ -1,4 +1,7 @@
-By using the effective_care_scores and hospitals_reduced, we are able to find the below results for states with best hospitals. We used the overall hospital ranking measure rank the states with the best hospitals. We also used the procedure scores by hospital, and grouped by state to obtain the states with the best hospitals by procedure measurements.
+By using the effective_care_scores and hospitals_reduced, we are able to find the below results for states with best hospitals. 
+
+We used the overall hospital ranking measure rank the states with the best hospitals. We also used the procedure scores by hospital, 
+and grouped by state to obtain the states with the best hospitals by procedure measurements.
 
 Top 10 States by Overall Hospital Rating
 

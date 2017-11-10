@@ -45,11 +45,11 @@ def patient_survey_correl():
     # merging with effective_care_scores table
     results = pd.merge(df, variability, on='provider_id')
 
-    print 'correlation between patient survey overall rating and hospital overall rating is '
+    print 'Correlation between patient survey hospital overall rating and hospital overall rating is '
     print np.round(results['overall_rating_of_hospital_performance_rate'].corr(results['hospital_overall_rating']), 2)
 
     print '\n'
-    print 'correlation between patient survey overall rating and hospital procedure variability is '
+    print 'correlation between patient survey hospital overall rating and hospital procedure variability is '
     print np.round(results['overall_rating_of_hospital_performance_rate'].corr(results['StDev Procedures']), 2)
 
     return

@@ -16,7 +16,7 @@ hc = HiveContext(sc)
 
 hospitals = hc.sql('select * from hospitals_reduced').toPandas()
 effective_care = hc.sql('select * from effective_care_scores').toPandas()
-survey_responses = hc.sql('select * from survey_responses_reduced').toPandas()
+
 
 def hospital_variability():
     df = pd.merge(hospitals, effective_care, how='inner', left_on='provider_id', right_on='provider_id')
@@ -33,10 +33,16 @@ def best_hospital_overall():
 def patient_survey_correl():
     variability = hospital_variability()
     hospital_rating = best_hospital_overall()
+    survey_responses = hc.sql('select * from survey_responses_reduced').toPandas()
 
+    # creating numeric columns from survey_response_reduced table and examining the overall rating of hospital performance in survey responses
     survey_responses['overall_rating_of_hospital_performance_rate'] = survey_responses['overall_rating_of_hospital_performance_rate'].replace('Not Available', np.nan).apply(pd.to_numeric)
     survey_responses = survey_responses.rename(columns={'provider_number': 'provider_id'})
+
+    # merging with hospital_rating_reduced table
     df = pd.merge(survey_responses[['provider_id', 'overall_rating_of_hospital_performance_rate']], hospital_rating[['provider_id', 'hospital_overall_rating']], on='provider_id')
+
+    # merging with effective_care_scores table
     results = pd.merge(df, variability, on='provider_id')
 
     print 'correlation between patient survey overall rating and hospital overall rating is '

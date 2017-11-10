@@ -11,5 +11,7 @@ The exploratory_data_analysis notebook was used to investigate the transformatio
 Week 7
 investigations folder contains all results. There are individual notebooks that show the work done to arrive at the results and then the .py files contain the scripts to execute and display output.
 
+The final question of comparing patient survey results against hospital rating and procedure variability has a notebook with some visualizations of the relationships. The hospital_and_patients.py file outputs the actual correlations
+
 Thanks,
 Harry
